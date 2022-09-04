@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif !important;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body.dark {
+  background-color: hsl(235deg, 21%, 11%) !important;
+}
+body.light {
+  background-color: hsl(0deg, 0%, 98%) !important;
+}
+
+#container.dark > img {
+  display: none;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30vh;
+  z-index: -454963;
+}
+#container.dark > img.b-des.bd {
+  display: block;
+}
+#container.dark #todo {
+  background-color: hsl(237deg, 14%, 26%);
+  box-shadow: none;
+}
+#container.dark #todo li {
+  background-color: hsl(237deg, 14%, 26%);
+  color: hsl(0deg, 0%, 98%);
+}
+#container.dark #todo span {
+  color: hsl(234deg, 11%, 52%);
+  background-color: hsl(237deg, 14%, 26%);
+}
+#container.light > img {
+  display: none;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -454963;
+  height: 30vh;
+}
+#container.light > img.b-des.bl {
+  display: block;
+}
+#container.light #type {
+  background-color: hsl(0deg, 0%, 98%);
+  background-color: hsl(0deg, 0%, 98%);
+}
+#container.light #type input {
+  background-color: hsl(0deg, 0%, 98%);
+  color: hsl(235deg, 21%, 11%);
+}
+#container.light #type span {
+  background-color: hsl(0deg, 0%, 98%);
+}
+#container main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  width: 70%;
+}
+#container main .title {
+  justify-content: space-between;
+  width: 100%;
+}
+#container main .title h1 {
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  flex-wrap: 700;
+}
+#container main .title > img {
+  cursor: pointer;
+}
+#container main #type {
+  margin: 20px 0;
+  align-items: center;
+  background-color: hsl(237deg, 14%, 26%);
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+#container main #type input {
+  outline: none !important;
+  border: none;
+  background-color: hsl(237deg, 14%, 26%);
+  margin: 0 10px;
+  color: hsl(0deg, 0%, 98%);
+  padding: 7px 0;
+  width: 100%;
+}
+#container main #type span {
+  background-color: hsl(237deg, 14%, 26%);
+  border: 1px solid hsl(235deg, 21%, 11%);
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+#container main #todo {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #ddd;
+}
+#container main #todo ul .cross {
+  width: 20px;
+  float: right;
+  display: none;
+  height: 20px;
+}
+#container main #todo li {
+  cursor: pointer;
+  border-radius: 5px;
+  display: inline;
+}
+#container main #todo li:hover .cross {
+  display: inline;
+}
+#container main #todo li span {
+  display: inline;
+  background-color: hsl(0deg, 0%, 98%);
+  border: 1px solid hsl(235deg, 21%, 11%);
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+#container main #todo li span.check {
+  position: relative;
+  background-image: linear-gradient(hsl(192deg, 100%, 67%), hsl(280deg, 87%, 65%));
+}
+#container main #todo li span.check img {
+  width: 10px;
+  margin: -3px;
+}
+#container main #status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  padding: 10px;
+  border-top: 1px solid hsl(235deg, 21%, 11%);
+}
+#container main #status span {
+  color: hsl(234deg, 11%, 52%);
+  text-transform: capitalize;
+}
+#container main #status span.active {
+  color: hsl(220deg, 98%, 61%);
+  margin: 0 5px;
+}
+#container main #status .activity > span,
+#container main #status .clear {
+  cursor: pointer;
+}
+
+@media (max-width: 375px) {
+  #container.dark > img {
+    display: none;
+  }
+  #container.dark > img.b-mob.bd {
+    display: block;
+  }
+  #container.light > img {
+    display: none;
+  }
+  #container.light > img.b-mob.bl {
+    display: block;
+  }
+}/*# sourceMappingURL=style.css.map */

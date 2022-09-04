@@ -1,24 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Todo app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Todo app</title>
 
-  Todo
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <!-- file  css for styling -->
+    <link rel="stylesheet" href="./style/style.css" />
+    <!-- file bootstrap -->
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-  <!-- Add dynamic number --> items left
+    <!-- file font awesome  -->
+    <link
+      rel="stylesheet"
+      href="./node_modules/font-awesome/css/font-awesome.min.css"
+    />
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="dark">
+    <div id="container" class="container dark">
+      <img src="./images/bg-desktop-dark.jpg" alt="" class="b-des bd" />
+      <img src="./images/bg-desktop-light.jpg" alt="" class="b-des bl" />
+      <img src="./images/bg-mobile-dark.jpg" alt="" class="b-mob bd" />
+      <img src="./images/bg-mobile-light.jpg" alt="" class="b-mob bl" />
+      <main>
+        <div class="title d-flex align-items-center">
+          <h1 class="h1 text-white">Todo</h1>
+          <img class="theme" src="./images/icon-sun.svg" alt="" />
+        </div>
+        <div id="type" class="input-group flex-nowrap">
+          <span
+            class="input-group-text rounded-circle"
+            id="addon-wrapping"
+          ></span>
+          <input type="text" placeholder="Create a new todo..." />
+        </div>
+        <div id="todo">
+          <ul id="all-ul" class="list-group list-group-flush"></ul>
+          <ul id="comp-ul" class="list-group list-group-flush"></ul>
+          <ul id="active-ul" class="list-group list-group-flush"></ul>
+          <div id="status">
+            <span class="item">0 items left</span>
+            <div class="activity">
+              <span id="all" class="active">All</span>
+              <span id="active" class="">active</span>
+              <span id="completed" class="">completed</span>
+            </div>
+            <span class="clear">clear completed</span>
+          </div>
+        </div>
+      </main>
+    </div>
+    <!--
+
+     Todo
+
+   items left
 
   All
   Active 
@@ -26,11 +85,14 @@
 
   Clear Completed
 
-  Drag and drop to reorder list
+  Drag and drop to reorder list -->
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
 </html>

@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+@import "./color";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif !important;
+  user-select: none;
+}
+body {
+  &.dark {
+    background-color: $Very-Dark-Blue !important;
+  }
+  &.light {
+    background-color: $Very-Light-Gray !important;
+  }
+}
+#container {
+  &.dark {
+    > img {
+      display: none;
+      width: 100vw;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 30vh;
+      z-index: -454963;
+      &.b-des.bd {
+        display: block;
+      }
+    }
+    #todo {
+      background-color: $Very-Dark-Grayish-Blue;
+      box-shadow: none;
+
+      li {
+        background-color: $Very-Dark-Grayish-Blue;
+        color: $Very-Light-Gray;
+      }
+      span {
+        color: $Dark-Grayish-Blue;
+        background-color: $Very-Dark-Grayish-Blue;
+      }
+    }
+  }
+  &.light {
+    > img {
+      display: none;
+      width: 100vw;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -454963;
+      height: 30vh;
+      &.b-des.bl {
+        display: block;
+      }
+    }
+    #type {
+      background-color: $Very-Light-Gray;
+      background-color: $Very-Light-Gray;
+      input {
+        background-color: $Very-Light-Gray;
+        color: $Very-Dark-Blue;
+      }
+      span {
+        background-color: $Very-Light-Gray;
+      }
+    }
+  }
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    width: 70%;
+    .title {
+      justify-content: space-between;
+      width: 100%;
+      h1 {
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        flex-wrap: 700;
+      }
+      > img {
+        cursor: pointer;
+      }
+    }
+    #type {
+      margin: 20px 0;
+      align-items: center;
+      background-color: $Very-Dark-Grayish-Blue;
+      border-radius: 5px;
+      padding: 5px 10px;
+      input {
+        outline: none !important;
+        border: none;
+        background-color: $Very-Dark-Grayish-Blue;
+        margin: 0 10px;
+        color: $Very-Light-Gray;
+        padding: 7px 0;
+        width: 100%;
+      }
+      span {
+        background-color: $Very-Dark-Grayish-Blue;
+        border: 1px solid $Very-Dark-Blue;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+      }
+    }
+    #todo {
+      width: 100%;
+      border-radius: 5px;
+      box-shadow: 5px 5px 5px #ddd;
+      ul {
+        .cross {
+          width: 20px;
+          // position: absolute;
+          float: right;
+          display: none;
+          height: 20px;
+        }
+      }
+      li {
+        cursor: pointer;
+        border-radius: 5px;
+        display: inline;
+        &:hover .cross {
+          display: inline;
+        }
+
+        // &.draggable {
+        //   opacity: 0.5;
+        //   border: 1px solid black;
+        //   transform: rotateZ(5deg);
+        // }
+        span {
+          display: inline;
+          background-color: $Very-Light-Gray;
+          border: 1px solid $Very-Dark-Blue;
+          width: 25px;
+          height: 25px;
+          cursor: pointer;
+          margin-right: 10px;
+          &.check {
+            position: relative;
+            background-image: linear-gradient($Check-Background);
+            img {
+              width: 10px;
+              margin: -3px;
+            }
+          }
+        }
+      }
+    }
+    #status {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      padding: 10px;
+      border-top: 1px solid $Very-Dark-Blue;
+
+      span {
+        color: $Dark-Grayish-Blue;
+        text-transform: capitalize;
+
+        &.active {
+          color: $Bright-Blue;
+          margin: 0 5px;
+        }
+      }
+      .activity > span,
+      .clear {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  #container {
+    &.dark {
+      > img {
+        display: none;
+        &.b-mob.bd {
+          display: block;
+        }
+      }
+    }
+    &.light {
+      > img {
+        display: none;
+        &.b-mob.bl {
+          display: block;
+        }
+      }
+    }
+  }
+}
